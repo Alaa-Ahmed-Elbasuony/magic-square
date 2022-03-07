@@ -26,24 +26,20 @@ int possible_moves(int game[], char possibleMove[]) {
 }
 
 void movegame(int game[], int temp, int move) {
-    int x;
+    int x = game[temp];
     if (move == 'v') {
-        x = game[temp];
         game[temp] = game[temp + 3];
         game[temp + 3] = x;
     }
     else if (move == '>') {
-        x = game[temp];
         game[temp] = game[temp + 1];
         game[temp + 1] = x;
     }
     else if (move == '<') {
-        x = game[temp];
         game[temp] = game[temp - 1];
         game[temp - 1] = x;
     }
     else if (move == '^') {
-        x = game[temp];
         game[temp] = game[temp - 3];
         game[temp - 3] = x;
     }
