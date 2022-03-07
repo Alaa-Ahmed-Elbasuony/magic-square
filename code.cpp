@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-int freq[9] = { 1,1,1,1,1,1,1,1,1 };
+int freq[] = { 1,1,1,1,1,1,1,1,1 };
+
 void printGame(int game[]) {
     cout << "$$$$$$$$$$$" << '\n';
     for (int i = 0; i < 9; i++) {
@@ -9,6 +10,7 @@ void printGame(int game[]) {
     }
     cout << "$$$$$$$$$$$" << '\n';
 }
+
 int possible_moves(int game[], char possibleMove[]) {
     for (int i = 0; i < 9; i++) {
         if (game[i] == 0) {
@@ -22,6 +24,7 @@ int possible_moves(int game[], char possibleMove[]) {
         }
     }
 }
+
 void movegame(int game[], int temp, int move) {
     int x;
     if (move == 'v') {
@@ -48,12 +51,14 @@ void movegame(int game[], int temp, int move) {
         cout << "it's not a move" << '\a';
     }
 }
+
 bool truemove(char move, char PossiableMove[]) {
     for (int i = 0; i < 4; i++)
         if (PossiableMove[i] == move)
             return true;
     return false;
 }
+
 bool correct(int game[]) {
     for (int i = 0; i < 9; i++) {
         if (game[i] != i)
@@ -61,6 +66,7 @@ bool correct(int game[]) {
     }
     return true;
 }
+
 void initRandom(int game[]) {
     for (int i = 0; i < 9; i++) {
         int random;
@@ -74,6 +80,8 @@ void initRandom(int game[]) {
         game[i] = random;
     }
 }
+
+
 int main() {
     int zeroPlace, game[9] = { 7 ,6 ,2 ,3 ,1 ,0 ,4 ,5 ,8 };
     initRandom(game);
@@ -94,3 +102,4 @@ int main() {
         }
     }
 }
+
