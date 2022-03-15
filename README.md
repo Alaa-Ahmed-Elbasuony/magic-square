@@ -1,3 +1,3 @@
 # magic-square
 
-It's a console app game
+8-puzzle console app game with c++ & python
